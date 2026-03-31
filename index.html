@@ -1,168 +1,817 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-IN">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZodiacMind - Horoscope App</title>
+    <title>ZodiacMind - Horoscope Generator, Kundali Chart & Marriage Compatibility App</title>
+    <meta name="description"
+        content="ZodiacMind is a free Android horoscope app for horoscope generator tools, kundali chart creation, marriage compatibility, Tamil astrology insights, and downloadable PDF reports.">
+    <meta name="keywords"
+        content="Horoscope generator, Kundali chart, Marriage compatibility, Tamil astrology, ஜாதகம், ஜாதக பொருத்தம், ZodiacMind, Horoscope app, Astrology app">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="author" content="ZodiacMind">
+    <meta name="theme-color" content="#330033">
+    <link rel="canonical" href="https://zodiacmind.in/">
+
+    <link rel="icon" href="/logo.png" sizes="any">
+    <link rel="apple-touch-icon" href="/logo.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ZodiacMind">
+    <meta property="og:title" content="ZodiacMind - Horoscope & Compatibility App">
+    <meta property="og:description"
+        content="Generate horoscope charts, check marriage compatibility, and explore Tamil astrology with the free ZodiacMind Android app.">
+    <meta property="og:url" content="https://zodiacmind.in/">
+    <meta property="og:image" content="https://zodiacmind.in/logo.png">
+    <meta property="og:locale" content="en_IN">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ZodiacMind - Horoscope & Compatibility App">
+    <meta name="twitter:description"
+        content="Free horoscope generator, kundali chart, marriage compatibility, and Tamil astrology guidance in one app.">
+    <meta name="twitter:image" content="https://zodiacmind.in/logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+    </noscript>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://zodiacmind.in/#organization",
+              "name": "ZodiacMind",
+              "url": "https://zodiacmind.in/",
+              "logo": "https://zodiacmind.in/logo.png",
+              "email": "support@zodiacmind.in"
+            },
+            {
+              "@type": "SoftwareApplication",
+              "@id": "https://zodiacmind.in/#softwareapplication",
+              "name": "ZodiacMind",
+              "url": "https://zodiacmind.in/",
+              "applicationCategory": "LifestyleApplication",
+              "operatingSystem": "Android",
+              "description": "Free horoscope and Tamil astrology app for kundali charts, compatibility matching, and PDF exports.",
+              "publisher": {
+                "@id": "https://zodiacmind.in/#organization"
+              },
+              "offers": {
+                "@type": "Offer",
+                "price": "0.00",
+                "priceCurrency": "INR"
+              }
+            },
+            {
+              "@type": "MobileApplication",
+              "@id": "https://zodiacmind.in/#mobileapplication",
+              "name": "ZodiacMind",
+              "url": "https://zodiacmind.in/",
+              "operatingSystem": "Android",
+              "applicationCategory": "LifestyleApplication",
+              "inLanguage": ["en", "ta"],
+              "isAccessibleForFree": true,
+              "featureList": [
+                "Horoscope generator",
+                "Kundali chart creation",
+                "Marriage compatibility",
+                "PDF export",
+                "Tamil astrology support"
+              ],
+              "publisher": {
+                "@id": "https://zodiacmind.in/#organization"
+              },
+              "offers": {
+                "@type": "Offer",
+                "price": "0.00",
+                "priceCurrency": "INR"
+              }
+            }
+          ]
+        }
+    </script>
 
     <style>
+        :root {
+            --brand: #330033;
+            --brand-soft: #6a2f73;
+            --accent: #a15bbb;
+            --bg: #f8f4fb;
+            --surface: #ffffff;
+            --text: #24172a;
+            --muted: #6e6774;
+            --border: rgba(51, 0, 51, 0.1);
+            --shadow: 0 14px 40px rgba(51, 0, 51, 0.12);
+            --radius: 22px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f9f6fb;
-            color: #333;
+            font-family: "Inter", Arial, sans-serif;
+            background:
+                radial-gradient(circle at top left, rgba(161, 91, 187, 0.12), transparent 0 22%),
+                var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        .skip-link {
+            position: absolute;
+            left: -999px;
+            top: auto;
+        }
+
+        .skip-link:focus {
+            left: 1rem;
+            top: 1rem;
+            z-index: 1001;
+            background: #fff;
+            color: var(--brand);
+            padding: 0.75rem 1rem;
+            border-radius: 10px;
         }
 
         header {
             background-color: #330033;
-            color: white;
-            padding: 15px 20px;
+            color: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            box-shadow: 0 8px 22px rgba(20, 0, 20, 0.18);
+        }
+
+        .header-inner {
+            width: min(1120px, calc(100% - 1.2rem));
+            margin: 0 auto;
+            padding: 0.85rem 0;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            gap: 1rem;
         }
 
-        header img {
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 800;
+            letter-spacing: 0.14em;
+        }
+
+        .brand img {
+            width: 50px;
             height: 50px;
+            object-fit: contain;
         }
 
         .nav-links a {
-            color: white;
+            color: #fff;
             text-decoration: none;
-            margin-left: 15px;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+            opacity: 0.95;
+            transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a:focus-visible {
+            opacity: 1;
+            transform: translateY(-1px);
         }
 
         .container {
-            padding: 20px;
-            max-width: 1100px;
-            margin: auto;
+            width: min(1120px, calc(100% - 1.2rem));
+            margin: 0 auto;
+        }
+
+        .section {
+            padding: 1.25rem 0 2rem;
         }
 
         .hero {
-            text-align: center;
-            padding: 40px 20px;
+            padding-top: 1.4rem;
+        }
+
+        .hero-card {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 1.5rem;
+            align-items: center;
+            padding: clamp(1.25rem, 3vw, 2.2rem);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(244, 232, 249, 0.95));
+            border: 1px solid var(--border);
+            border-radius: 28px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .hero-card::after {
+            content: "";
+            position: absolute;
+            width: 240px;
+            height: 240px;
+            right: -90px;
+            top: -90px;
+            background: radial-gradient(circle, rgba(161, 91, 187, 0.22), transparent 70%);
+            pointer-events: none;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.35rem 0.8rem;
+            border-radius: 999px;
+            background: rgba(51, 0, 51, 0.07);
+            color: var(--brand);
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 0.9rem;
+        }
+
+        h1,
+        h2,
+        h3 {
+            margin: 0;
+            line-height: 1.2;
         }
 
         .hero h1 {
-            color: #330033;
-            font-size: 2.5rem;
-            margin-bottom: 10px;
+            color: var(--brand);
+            font-size: clamp(2.2rem, 4vw, 3.4rem);
+            margin-bottom: 0.7rem;
         }
 
         .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
+            margin: 0 0 0.85rem;
+            font-size: 1.04rem;
+            color: #463b4c;
+            max-width: 610px;
+        }
+
+        .subtitle {
+            display: block;
+            margin-top: 0.35rem;
+            font-size: 0.92rem;
+            color: #777;
+            font-weight: 500;
+            letter-spacing: 0.01em;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+            margin-top: 1.2rem;
+        }
+
+        .play-button {
+            display: inline-flex;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 12px 25px rgba(51, 0, 51, 0.16);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .play-button:hover,
+        .play-button:focus-visible {
+            transform: translateY(-4px) scale(1.01);
+            box-shadow: 0 16px 32px rgba(51, 0, 51, 0.22);
         }
 
         .play-button img {
             width: 180px;
+            height: auto;
+        }
+
+        .stats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-top: 1.2rem;
+        }
+
+        .stat {
+            min-width: 120px;
+            padding: 0.8rem 0.9rem;
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.88);
+            border: 1px solid rgba(51, 0, 51, 0.08);
+            box-shadow: 0 8px 18px rgba(51, 0, 51, 0.06);
+        }
+
+        .stat strong {
+            display: block;
+            color: var(--brand);
+            font-size: 0.96rem;
+        }
+
+        .hero-visual {
+            display: grid;
+            place-items: center;
+        }
+
+        .phone-mockup {
+            width: min(100%, 330px);
+            padding: 12px;
+            border-radius: 32px;
+            background: linear-gradient(180deg, #1f0f27, #34103c);
+            box-shadow: 0 26px 50px rgba(51, 0, 51, 0.25);
+        }
+
+        .screen {
+            min-height: 510px;
+            padding: 1rem;
+            border-radius: 24px;
+            background: linear-gradient(180deg, #fff7ff, #efe3f5);
+            display: grid;
+            gap: 0.85rem;
+        }
+
+        .screen-card {
+            padding: 0.9rem;
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 10px 18px rgba(51, 0, 51, 0.07);
+        }
+
+        .screen-card strong {
+            color: var(--brand);
+        }
+
+        .screen-pill {
+            display: inline-block;
+            margin-top: 0.35rem;
+            padding: 0.3rem 0.55rem;
+            border-radius: 999px;
+            background: rgba(51, 0, 51, 0.08);
+            color: var(--brand);
+            font-size: 0.78rem;
+            font-weight: 700;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 1.2rem;
+        }
+
+        .section-heading h2 {
+            color: var(--brand);
+            font-size: clamp(1.7rem, 3vw, 2.2rem);
+            margin-bottom: 0.4rem;
+        }
+
+        .section-heading p {
+            max-width: 700px;
+            margin: 0.7rem auto 0;
+            color: var(--muted);
+        }
+
+        .carousel-wrap {
+            position: relative;
+        }
+
+        .swiper {
+            padding: 0.35rem 0.2rem 3rem;
+        }
+
+        .swiper-slide {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 0.85rem;
+            box-shadow: 0 12px 28px rgba(51, 0, 51, 0.09);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .swiper-slide img {
+            width: auto;
+            max-width: 100%;
+            height: min(70vh, 560px);
+            aspect-ratio: auto;
+            object-fit: contain;
+            object-position: center top;
+            border-radius: 18px;
+            background: linear-gradient(180deg, #f2e7f8, #e6d7ee);
+            margin: 0 auto;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            width: 42px;
+            height: 42px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 50%;
+            color: var(--brand);
+            box-shadow: 0 8px 18px rgba(51, 0, 51, 0.12);
+        }
+
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+            font-size: 1rem;
+            font-weight: 800;
+        }
+
+        .swiper-pagination-bullet {
+            background: rgba(51, 0, 51, 0.3);
+            opacity: 1;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: var(--brand);
         }
 
         .features {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+            margin-top: 1.2rem;
         }
 
         .feature-card {
-            background: white;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
+            background: var(--surface);
+            padding: 1.2rem;
+            border-radius: var(--radius);
+            box-shadow: 0 12px 28px rgba(51, 0, 51, 0.08);
+            border: 1px solid var(--border);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            text-align: left;
+        }
+
+        .feature-card:hover,
+        .feature-card:focus-within {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 34px rgba(51, 0, 51, 0.14);
+        }
+
+        .feature-icon {
+            width: 52px;
+            height: 52px;
+            display: grid;
+            place-items: center;
+            margin-bottom: 0.9rem;
+            border-radius: 14px;
+            background: linear-gradient(135deg, rgba(51, 0, 51, 0.12), rgba(161, 91, 187, 0.18));
+            font-size: 1.35rem;
         }
 
         .feature-card h3 {
-            color: #330033;
+            color: var(--brand);
+            font-size: 1.12rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-card p {
+            margin: 0;
+            color: var(--muted);
         }
 
         .free-banner {
-            background-color: #330033;
+            background: linear-gradient(135deg, #330033, #5f2a6e 70%, #7b3a90);
             color: white;
             text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-            border-radius: 10px;
+            padding: 1.5rem 1.2rem;
+            border-radius: 24px;
+            box-shadow: 0 18px 36px rgba(51, 0, 51, 0.2);
+            margin-top: 0.25rem;
+        }
+
+        .free-banner h2 {
+            font-size: clamp(1.6rem, 2.6vw, 2rem);
+        }
+
+        .free-banner p {
+            margin: 0.8rem 0 0;
+            color: rgba(255, 255, 255, 0.92);
+        }
+
+        .free-banner .subtitle {
+            color: rgba(255, 255, 255, 0.8);
         }
 
         footer {
             text-align: center;
-            padding: 15px;
-            margin-top: 30px;
-            font-size: 0.9rem;
-            color: #777;
+            padding: 1.5rem 1rem 2.5rem;
+            margin-top: 0.5rem;
+            font-size: 0.95rem;
+            color: var(--muted);
         }
 
         footer a {
-            color: #330033;
+            color: var(--brand);
             text-decoration: none;
-            margin: 0 10px;
+            font-weight: 600;
+            margin: 0 0.25rem;
         }
 
-        @media (max-width: 600px) {
-            .hero h1 {
-                font-size: 2rem;
+        .fade-up {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-up.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 860px) {
+            .hero-card {
+                grid-template-columns: 1fr;
+                text-align: center;
             }
 
             .hero p {
-                font-size: 1rem;
+                margin-inline: auto;
+            }
+
+            .hero-actions,
+            .stats {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .header-inner {
+                padding: 0.8rem 0;
+            }
+
+            .brand {
+                letter-spacing: 0.08em;
+                font-size: 0.92rem;
+            }
+
+            .nav-links a {
+                font-size: 0.88rem;
+            }
+
+            .section {
+                padding: 1rem 0 1.8rem;
+            }
+
+            .hero-card {
+                border-radius: 22px;
+                padding: 1.1rem;
             }
 
             .play-button img {
-                width: 150px;
+                width: 160px;
+            }
+
+            .screen {
+                min-height: auto;
+            }
+
+            .swiper-button-next,
+            .swiper-button-prev {
+                display: none;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+
+            .fade-up {
+                opacity: 1;
+                transform: none;
             }
         }
     </style>
 </head>
 
 <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
 
     <header>
-        <img src="logo.png" alt="ZodiacMind Logo">
-        <div class="nav-links">
-            <!-- Replace with your actual privacy policy URL -->
-            <a href="privacy-policy/index.html">Privacy Policy</a>
+        <div class="header-inner">
+            <a class="brand" href="https://zodiacmind.in/" aria-label="ZodiacMind home page">
+                <img src="logo.png" alt="ZodiacMind logo" width="50" height="50">
+                <span><strong>ZODIAC</strong> MIND</span>
+            </a>
+            <nav class="nav-links" aria-label="Primary navigation">
+                <a href="privacy-policy/index.html">Privacy Policy</a>
+            </nav>
         </div>
     </header>
 
-    <div class="container">
+    <main id="main-content">
+        <div class="container">
+            <section class="hero section" aria-labelledby="hero-title">
+                <div class="hero-card fade-up">
+                    <div>
+                        <span class="eyebrow">Free Tamil Astrology App</span>
+                        <h1 id="hero-title"><b>ZODIAC</b> MIND
+                            <span class="subtitle">Discover What the Stars Say About You</span>
+                        </h1>
+                        <p>Your complete astrology companion for horoscope charts (Rasi & Navamsa), kundali insights, marriage
+                            compatibility, and Tamil astrology guidance.</p>
+                        <p class="subtitle">ராசி & நவாம்ச ஜாதகம், குண்டலி விளக்கம், திருமண பொருத்தம் மற்றும் தமிழ் ஜோதிட ஆலோசனை வழங்கும் முழுமையான பயன்பாடு.</p>
 
-        <section class="hero">
-            <h1><b>ZODIAC</b> MIND</h1>
-            <p>Your complete astrology companion for charts & compatibility</p>
+                        <div class="hero-actions">
+                            <a href="https://play.google.com/store/apps/details?id=YOUR_APP_ID" target="_blank"
+                                rel="noopener noreferrer" class="play-button"
+                                aria-label="Download ZodiacMind on Google Play">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                                    alt="Get ZodiacMind on Google Play" width="180" height="54">
+                            </a>
+                        </div>
 
-            <a href="https://play.google.com/store/apps/details?id=YOUR_APP_ID" target="_blank" class="play-button">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-                    alt="Get it on Google Play">
-            </a>
-        </section>
+                        <div class="stats" aria-label="App highlights">
+                            <div class="stat">
+                                <strong>Free to Use</strong>
+                                <span class="subtitle">இலவச சேவை</span>
+                            </div>
+                            <div class="stat">
+                                <strong>PDF Reports</strong>
+                                <span class="subtitle">PDF பதிவிறக்கம்</span>
+                            </div>
+                            <div class="stat">
+                                <strong>Nakshatra Naming</strong>
+                                <span class="subtitle">நட்சத்திரப் பெயரிடல்</span>
+                            </div>
+                        </div>
+                    </div>
 
-        <section class="features">
-            <div class="feature-card">
-                <h3>Generate Horoscope Chart</h3>
-                <p>Instantly generate accurate horoscope charts using your birth details.</p>
-            </div>
+                    <div class="hero-visual" aria-hidden="true">
+                        <div class="phone-mockup">
+                            <div class="screen">
+                                <div class="screen-card">
+                                    <strong>Kundli Birth Chart</strong>
+                                    <span class="subtitle">ராசி & நவாம்சம்</span>
+                                    <span class="screen-pill">Instant Report</span>
+                                </div>
+                                <div class="screen-card">
+                                    <strong>Your Dasha Timeline</strong>
+                                    <span class="subtitle">தசை கால வரிசை</span>
+                                    <span class="screen-pill">Instant Analysis</span>
+                                </div>
+                                <div class="screen-card">
+                                    <strong>Marriage Compatibility Score</strong>
+                                    <span class="subtitle">பொருத்த மதிப்பெண்</span>
+                                    <span class="screen-pill">8 / 10 Match</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-            <div class="feature-card">
-                <h3>Marriage Compatibility</h3>
-                <p>Check detailed compatibility for marriage using traditional astrology methods.</p>
-            </div>
+            <section id="screenshots" class="section" aria-labelledby="screenshots-title">
+                <div class="section-heading fade-up">
+                    <h2 id="screenshots-title">See ZodiacMind in Action
+                        <span class="subtitle">ZodiacMind பயன்பாட்டின் காட்சிகள்</span>
+                    </h2>
+                    <p>ஜாதகம் உருவாக்குதல், திருமண பொருத்தம் பார்ப்பது மற்றும் விரிவான ஜோதிட தகவல்களை எளிதாக பெறுவது எப்படி என்பதை இந்த காட்சிகளில் காணுங்கள்.</p>
+                </div>
 
-            <div class="feature-card">
-                <h3>Export as PDF</h3>
-                <p>Download beautifully formatted horoscope reports as PDF instantly.</p>
-            </div>
-        </section>
+                <div class="carousel-wrap fade-up">
+                    <div class="swiper screenshots-swiper" aria-label="ZodiacMind app screenshots carousel">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="images/app1.jpg" alt="ZodiacMind app home screen preview" loading="lazy"
+                                    decoding="async" width="600" height="1067"
+                                    onerror="this.onerror=null;this.src='https://placehold.co/600x1067/efe7f5/330033?text=ZodiacMind+Screen+1';">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/app2.jpg" alt="Horoscope chart generation screen" loading="lazy"
+                                    decoding="async" width="600" height="1067"
+                                    onerror="this.onerror=null;this.src='https://placehold.co/600x1067/f5ebfa/330033?text=ZodiacMind+Screen+2';">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/app3.jpg" alt="Marriage compatibility report preview"
+                                    loading="lazy" decoding="async" width="600" height="1067"
+                                    onerror="this.onerror=null;this.src='https://placehold.co/600x1067/f2e5f7/330033?text=ZodiacMind+Screen+3';">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/app4.jpg" alt="PDF export report preview" loading="lazy"
+                                    decoding="async" width="600" height="1067"
+                                    onerror="this.onerror=null;this.src='https://placehold.co/600x1067/eee0f6/330033?text=ZodiacMind+Screen+4';">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/app5.jpg" alt="PDF export report preview" loading="lazy"
+                                    decoding="async" width="600" height="1067"
+                                    onerror="this.onerror=null;this.src='https://placehold.co/600x1067/eee0f6/330033?text=ZodiacMind+Screen+4';">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/app6.jpg" alt="PDF export report preview" loading="lazy"
+                                    decoding="async" width="600" height="1067"
+                                    onerror="this.onerror=null;this.src='https://placehold.co/600x1067/eee0f6/330033?text=ZodiacMind+Screen+4';">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/app7.jpg" alt="PDF export report preview" loading="lazy"
+                                    decoding="async" width="600" height="1067"
+                                    onerror="this.onerror=null;this.src='https://placehold.co/600x1067/eee0f6/330033?text=ZodiacMind+Screen+4';">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/app8.jpg" alt="PDF export report preview" loading="lazy"
+                                    decoding="async" width="600" height="1067"
+                                    onerror="this.onerror=null;this.src='https://placehold.co/600x1067/eee0f6/330033?text=ZodiacMind+Screen+4';">
+                            </div>
+                        </div>
+                        <div class="swiper-pagination" aria-hidden="true"></div>
+                        <div class="swiper-button-prev" aria-label="Previous screenshot"></div>
+                        <div class="swiper-button-next" aria-label="Next screenshot"></div>
+                    </div>
+                </div>
+            </section>
 
-        <div class="free-banner">
-            <h2>100% Free App</h2>
-            <p>All features are completely free. No subscriptions. No hidden charges.</p>
+            <section id="features" class="section" aria-labelledby="features-title">
+                <div class="section-heading fade-up">
+                    <h2 id="features-title">Core Features
+                        <span class="subtitle">முக்கிய அம்சங்கள்</span>
+                    </h2>
+                    <p>Powerful astrology tools designed to help you understand your horoscope, relationships, and life path with ease.</p>
+                </div>
+
+                <div class="features">
+
+                    <article class="feature-card fade-up">
+                        <div class="feature-icon" aria-hidden="true">✨</div>
+                        <h3>Horoscope Chart
+                            <span class="subtitle">ஜாதக கட்டம்</span>
+                        </h3>
+                        <p>Generate accurate Rasi and Navamsa horoscope charts instantly using your birth date, time, and place.</p>
+                    </article>
+
+                    <article class="feature-card fade-up">
+                        <div class="feature-icon" aria-hidden="true">💍</div>
+                        <h3>Horoscope Matching
+                            <span class="subtitle">திருமண பொருத்தம்</span>
+                        </h3>
+                        <p>Check marriage compatibility using traditional astrology methods with clear and easy-to-understand results.</p>
+                    </article>
+
+                    <article class="feature-card fade-up">
+                        <div class="feature-icon" aria-hidden="true">🪐</div>
+                        <h3>Dasha Timeline
+                            <span class="subtitle">தசை கால வரிசை</span>
+                        </h3>
+                        <p>Explore planetary dasha periods and understand how different phases influence your life journey.</p>
+                    </article>
+
+                    <article class="feature-card fade-up">
+                        <div class="feature-icon" aria-hidden="true">👶</div>
+                        <h3>Nakshatra Naming
+                            <span class="subtitle">நட்சத்திர பெயர் பரிந்துரை</span>
+                        </h3>
+                        <p>Find meaningful baby names based on your child's birth nakshatra following traditional naming rules.</p>
+                    </article>
+
+                </div>
+            </section>
+
+            <section class="section" aria-labelledby="free-app-title">
+                <div class="free-banner fade-up">
+                    <h2 id="free-app-title">100% Free App
+                        <span class="subtitle">100% இலவச பயன்பாடு</span>
+                    </h2>
+                    <p>All features are completely free. No subscriptions. No hidden charges.</p>
+                </div>
+            </section>
         </div>
-
-    </div>
+    </main>
 
     <footer>
         <p>&copy; 2026 ZodiacMind.in | All Rights Reserved.</p>
@@ -172,6 +821,56 @@
         </p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            if (window.Swiper) {
+                new Swiper('.screenshots-swiper', {
+                    loop: true,
+                    grabCursor: true,
+                    centeredSlides: true,
+                    slidesPerView: 1.1,
+                    spaceBetween: 16,
+                    autoplay: {
+                        delay: 2800,
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: true
+                    },
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev'
+                    },
+                    breakpoints: {
+                        640: {
+                            slidesPerView: 1.4,
+                            spaceBetween: 18
+                        },
+                        960: {
+                            slidesPerView: 2.2,
+                            spaceBetween: 20
+                        }
+                    }
+                });
+            }
+
+            var observer = new IntersectionObserver(function (entries, obs) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            document.querySelectorAll('.fade-up').forEach(function (element) {
+                observer.observe(element);
+            });
+        });
+    </script>
 </body>
 
 </html>
