@@ -16,6 +16,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Tiro+Tamil:ital@0;1&display=swap">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1943296208043134" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../../style.css">
+    <script src="../../../main.js" defer></script>
     <style>
         :root {
             --brand: #330033;
@@ -44,60 +46,6 @@
             background: var(--bg);
             color: var(--text);
             line-height: 1.6;
-        }
-
-        header {
-            background-color: #330033;
-            color: #fff;
-            position: sticky;
-            top: 0;
-            z-index: 999;
-            box-shadow: 0 8px 22px rgba(20, 0, 20, 0.18);
-        }
-
-        .header-inner {
-            width: min(1120px, calc(100% - 1.2rem));
-            margin: 0 auto;
-            padding: 0.85rem 0;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 1rem;
-        }
-
-        .brand {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.8rem;
-            color: #fff;
-            text-decoration: none;
-            font-weight: 800;
-            letter-spacing: 0.14em;
-        }
-
-        .brand img {
-            width: 50px;
-            height: 50px;
-            object-fit: contain;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 1.5rem;
-            align-items: center;
-        }
-
-        .nav-links a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 600;
-            opacity: 0.95;
-            transition: opacity 0.2s ease;
-        }
-
-        .nav-links a:hover {
-            opacity: 1;
         }
 
         .container {
@@ -134,55 +82,11 @@
             color: var(--brand);
             text-decoration: none;
         }
-
-        footer {
-            text-align: center;
-            padding: 2rem 1rem;
-            margin-top: 2rem;
-            font-size: 0.95rem;
-            color: var(--muted);
-        }
-
-        footer a {
-            color: var(--brand);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        @media (max-width: 640px) {
-            .header-inner {
-                padding: 0.8rem 0;
-            }
-
-            .brand {
-                font-size: 0.9rem;
-            }
-
-            .nav-links {
-                gap: 1rem;
-            }
-
-            .nav-links a {
-                font-size: 0.85rem;
-            }
-        }
     </style>
 </head>
 
 <body>
-    <header>
-        <div class="header-inner">
-            <a class="brand" href="../../../index.html">
-                <img src="../../../logo.png" alt="ZodiacMind logo">
-                <span><strong>ZODIAC</strong> MIND</span>
-            </a>
-            <nav class="nav-links">
-                <a href="../../../index.html">Home</a>
-                <a href="../rasi-guide.html">Rasi Guide</a>
-                <a href="../../../privacy-policy/index.html">Privacy Policy</a>
-            </nav>
-        </div>
-    </header>
+    <header id="header-container" data-root="../../../"></header>
 
     <main class="container">
         <div class="lang-switch">
@@ -195,7 +99,7 @@
         <p>துலாம் ராசியினர் மிகவும் இனிமையான சுபாவம் கொண்டவர்கள். மற்றவர்களிடம் அன்பாகவும் பண்பாகவும் பழகுவார்கள். இவர்களிடம் ஒருவிதமான ஈர்ப்பு சக்தி இருக்கும். எதையும் சீர்தூக்கிப் பார்த்து முடிவெடுப்பதில் இவர்கள் வல்லவர்கள். இவர்கள் எப்போதும் அமைதியையும் சமாதானத்தையும் விரும்புவார்கள். கலை உணர்வு மிக்கவர்கள் என்பதால், அழகான சூழலில் இருப்பதையே இவர்கள் விரும்புவார்கள். சமூகத்தில் நல்ல மதிப்பைப் பெற்றிருப்பார்கள்.</p>
 
         <h2>பலம் (Strengths)</h2>
-        <p>இவர்களின் மிகப்பெரிய பலம் இவர்களின் ராஜதந்திரம் மற்றும் சமாதானம் செய்யும் குணம். எப்பேர்ப்பட்ட சண்டையையும் தனது பேச்சால் தீர்த்து வைப்பார்கள். நேர்மை மற்றும் நீதி இவர்களின் இரு கண்கள். சமூகத்தில் அனைவரிடமும் இணக்கமாகப் பழகுவார்கள். இவர்களின் பேச்சுத் திறன் மற்றும் மற்றவர்களைப் புரிந்து கொள்ளும் ஆற்றல் மிகச் சிறப்பாக இருக்கும். கலை மற்றும் வடிவமைப்புத் துறையில் இவர்களுக்குத் தனித்திறமை உண்டு.</p>
+        <p>இவர்களின் மிகப்பெரிய பலம் இவர்களின் ராஜதந்திரம் மற்றும் சமாதானம் செய்யும் குணம். எப்பேர்ப்பட்ட சண்டையையும் தனது பேச்சால் தீர்த்து வைப்பார்கள். நேர்மை மற்றும் நீதி இவர்களின் இரு கண்கள். சமூகத்தில் அனைவரிடமும் இணக்கமாகப் பழகுவார்கள். இவர்களின் பேச்சுத் திறன் மற்றும் மற்றவர்களைப் புரிந்து கொள்ளும் ஆற்றல் மிகச் சிறப்பாக இருக்கும். கலை மற்றும் வடிவமைப்புத் துறையில் இவர்களுக்குத் தனித்திறமை உண்டு Kal.</p>
 
         <h2>பலவீனம் (Weaknesses)</h2>
         <p>மன உறுதி இல்லாமை இவர்களின் முக்கிய பலவீனமாக அமையலாம். ஒரு முடிவை எடுப்பதற்கு அதிக நேரம் எடுத்துக் கொள்வார்கள். மற்றவர்களைத் திருப்திப்படுத்த வேண்டும் என்ற எண்ணம் இவர்களைச் சில நேரங்களில் தவறான முடிவெடுக்கத் தூண்டும். மோதல்களைத் தவிர்ப்பதற்காக உண்மைகளை மறைக்கக் கூடும். எதிலும் சோம்பேறித்தனம் அவ்வப்போது எட்டிப் பார்க்கும். மற்றவர்களின் ஆதிக்கத்திற்கு எளிதில் அடிபணிய வாய்ப்புண்டு.</p>
@@ -216,14 +120,7 @@
         <p>துலாம் ராசியினர் <strong>வைரம் (Diamond)</strong> அணிவது மிகவும் நல்லது. இது இவர்களின் செல்வத்தையும் திருமண வாழ்வின் மகிழ்ச்சியையும் அதிகரிக்கும்.</p>
     </main>
 
-    <footer>
-        <p>&copy; 2026 ZodiacMind.in | All Rights Reserved.</p>
-        <p>
-            <a href="../../../index.html">Home</a> |
-            <a href="../../../privacy-policy/index.html">Privacy Policy</a> |
-            <a href="mailto:support@zodiacmind.in">Support</a>
-        </p>
-    </footer>
+    <footer id="footer-container" data-root="../../../"></footer>
 </body>
 
 </html>

@@ -1,3 +1,16 @@
+:root {
+    --brand: #330033;
+    --brand-soft: #6a2f73;
+    --accent: #a15bbb;
+    --bg: #f8f4fb;
+    --surface: #ffffff;
+    --text: #24172a;
+    --muted: #6e6774;
+    --border: rgba(51, 0, 51, 0.1);
+    --shadow: 0 14px 40px rgba(51, 0, 51, 0.12);
+    --radius: 22px;
+}
+
 /* Shared Navigation and Header Styles */
 header {
     background-color: #330033;
@@ -85,6 +98,30 @@ header {
 
 .menu-toggle.active span:nth-child(3) {
     transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Shared Footer Styles */
+footer {
+    text-align: center;
+    padding: 2.5rem 1rem;
+    margin-top: 2rem;
+    font-size: 0.95rem;
+    color: var(--muted);
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+footer a {
+    color: var(--brand);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+footer a:hover {
+    color: var(--accent);
 }
 
 @media (max-width: 640px) {

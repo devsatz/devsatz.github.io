@@ -182,20 +182,6 @@
             margin-bottom: 0.8rem;
         }
 
-        footer {
-            text-align: center;
-            padding: 2.5rem 1rem;
-            background: #330033;
-            color: #fff;
-            margin-top: 4rem;
-        }
-
-        footer a {
-            color: #a15bbb;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
         @media (max-width: 640px) {
             .swiper-slide {
                 padding: 1.5rem;
@@ -257,21 +243,14 @@
                 <div class="seo-item">
                     <h3>ஜோதிடம் மற்றும் அறிவியல்</h3>
                     <p>ஜோதிடம் என்பது வானியல் கணக்கீடுகளை அடிப்படையாகக் கொண்ட ஒரு கலை. கிரகங்களின் கதிர்வீச்சு மற்றும்
-                        ஈர்ப்பு விசை மனித மனநிலை and உடல்நிலையில் மாற்றங்களை ஏற்படுத்துகிறது என்பதை நவீன அறிவியலும் ஒரு
+                        ஈர்ப்பு விசை மனித மனநிலை and உடல்நிலை மாற்றங்களை ஏற்படுத்துகிறது என்பதை நவீன அறிவியலும் ஒரு
                         வகையில் ஒப்புள்கிறது.</p>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; <span id="footer-year">2026</span> ZodiacMind.in | All Rights Reserved.</p>
-        <p>
-            <a href="/index.html">Home</a> |
-            <a href="/privacy-policy/index.html">Privacy Policy</a> |
-            <a href="mailto:support@zodiacmind.in">Support</a>
-        </p>
-    </footer>
+    <footer id="footer-container"></footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
@@ -327,8 +306,6 @@
                 if (metaDesc) {
                     metaDesc.setAttribute('content', `இன்றைய ராசிபலன் ${formattedDate}: 12 ராசிகளுக்கான இன்றைய பலன்கள். மேஷம் முதல் மீனம் வரை இன்று உங்கள் ராசிக்கு என்ன பலன் என்பதை அறிந்து கொள்ளுங்கள்.`);
                 }
-
-                document.getElementById('footer-year').textContent = year;
             }
 
             function renderSlides(palanData) {

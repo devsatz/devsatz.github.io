@@ -16,6 +16,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Tiro+Tamil:ital@0;1&display=swap">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1943296208043134" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../../style.css">
+    <script src="../../../main.js" defer></script>
     <style>
         :root {
             --brand: #330033;
@@ -44,60 +46,6 @@
             background: var(--bg);
             color: var(--text);
             line-height: 1.6;
-        }
-
-        header {
-            background-color: #330033;
-            color: #fff;
-            position: sticky;
-            top: 0;
-            z-index: 999;
-            box-shadow: 0 8px 22px rgba(20, 0, 20, 0.18);
-        }
-
-        .header-inner {
-            width: min(1120px, calc(100% - 1.2rem));
-            margin: 0 auto;
-            padding: 0.85rem 0;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 1rem;
-        }
-
-        .brand {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.8rem;
-            color: #fff;
-            text-decoration: none;
-            font-weight: 800;
-            letter-spacing: 0.14em;
-        }
-
-        .brand img {
-            width: 50px;
-            height: 50px;
-            object-fit: contain;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 1.5rem;
-            align-items: center;
-        }
-
-        .nav-links a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 600;
-            opacity: 0.95;
-            transition: opacity 0.2s ease;
-        }
-
-        .nav-links a:hover {
-            opacity: 1;
         }
 
         .container {
@@ -134,55 +82,11 @@
             color: var(--brand);
             text-decoration: none;
         }
-
-        footer {
-            text-align: center;
-            padding: 2rem 1rem;
-            margin-top: 2rem;
-            font-size: 0.95rem;
-            color: var(--muted);
-        }
-
-        footer a {
-            color: var(--brand);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        @media (max-width: 640px) {
-            .header-inner {
-                padding: 0.8rem 0;
-            }
-
-            .brand {
-                font-size: 0.9rem;
-            }
-
-            .nav-links {
-                gap: 1rem;
-            }
-
-            .nav-links a {
-                font-size: 0.85rem;
-            }
-        }
     </style>
 </head>
 
 <body>
-    <header>
-        <div class="header-inner">
-            <a class="brand" href="../../../index.html">
-                <img src="../../../logo.png" alt="ZodiacMind logo">
-                <span><strong>ZODIAC</strong> MIND</span>
-            </a>
-            <nav class="nav-links">
-                <a href="../../../index.html">Home</a>
-                <a href="../rasi-guide.html">Rasi Guide</a>
-                <a href="../../../privacy-policy/index.html">Privacy Policy</a>
-            </nav>
-        </div>
-    </header>
+    <header id="header-container" data-root="../../../"></header>
 
     <main class="container">
         <div class="lang-switch">
@@ -198,7 +102,7 @@
         <p>இவர்களின் மிகப்பெரிய பலம் இவர்களின் அன்பு மற்றும் அரவணைக்கும் குணம். யாரிடமும் எளிதில் பழகிவிடுவார்கள். இவர்களின் உள்ளுணர்வு (Intuition) மிக வலுவாக இருக்கும், இது இவர்களை ஆபத்துக்களில் இருந்து காப்பாற்றும். விடாமுயற்சி மற்றும் பொறுமை இவர்களின் சிறப்பம்சங்கள். பழைய நினைவுகளைப் போற்றிப் பாதுகாப்பதில் இவர்களுக்கு நிகர் இவர்களே. மற்றவர்களுக்குத் தாயுள்ளத்தோடு உதவுவார்கள்.</p>
 
         <h2>பலவீனம் (Weaknesses)</h2>
-        <p>அதிகப்படியான உணர்ச்சிவசப்படுவது இவர்களின் முக்கிய பலவீனம். சிறிய விஷயங்களையும் மனதில் போட்டு குழப்பிக் கொள்வார்கள். பழைய கசப்பான சம்பவங்களை மறக்க முடியாமல் தவிப்பார்கள். சில நேரங்களில் அதிகப்படியான சந்தேக குணம் இவர்களுக்கு வரக்கூடும். மற்றவர்களைச் சார்ந்தே இருக்க விரும்புவது இவர்களின் முன்னேற்றத்தைத் தடுக்கலாம். ஒரு விஷயத்தில் இருந்து வெளிவர இவர்களுக்கு அதிக காலம் எடுக்கும்.</p>
+        <p>அதிகப்படியான உணர்ச்சிவசப்படுவது இவர்களின் முக்கிய பலவீனம். சிறிய விஷயங்களையும் மனதில் போட்டு குழப்பிக் கொள்வார்கள். பழைய கசப்பான சம்பவங்களை மறக்க முடியாமல் தவிப்பார்கள். சில நேரங்களில் அதிகப்படியான சந்தேக குணம் இவர்களுக்கு வரக்கூடும். மற்றவர்களைச் சார்ந்தே இருக்க விரும்புவது இவர்களின் முன்னேற்றத்தைத் தடுக்கலாம். ஒரு விஷயத்தில் இருந்து வெளிவர இவர்களுக்கு அதிக காலம் எடுக்கும் Kal.</p>
 
         <h2>தொழில் (Career)</h2>
         <p>சந்திரனின் ஆதிக்கம் இருப்பதால், இவர்கள் மருத்துவம், செவிலியர் பணி, மனநல ஆலோசனை மற்றும் கல்வித் துறைகளில் சிறந்து விளங்குவார்கள். பால் மற்றும் திரவப் பொருட்கள் தொடர்பான வியாபாரம், உணவகம், மற்றும் ஏற்றுமதி இறக்குமதி தொழிலில் இவர்கள் வெற்றி பெறுவார்கள். கலை மற்றும் இலக்கியத் துறையிலும் இவர்களுக்கு நல்ல வாய்ப்புகள் அமையும். அரசுப் பணிகளிலும் இவர்கள் நல்ல நிலையை அடையலாம்.</p>
@@ -213,17 +117,10 @@
         <p>இவர்களின் அதிர்ஷ்ட எண்கள் <strong>2, 7, 11</strong> ஆகும். இந்த எண்கள் இவர்களின் வாழ்வில் சுப காரியங்களை உண்டாக்கும்.</p>
 
         <h2>அதிர்ஷ்ட கல் (Lucky Stone)</h2>
-        <p>கடக ராசியினர் <strong>முத்து (Pearl)</strong> அணிவது மிகவும் நல்லது. இது இவர்களின் மனக் குழப்பத்தை நீக்கி, தெளிவான சிந்தனையைத் தரும்持.</p>
+        <p>கடக ராசியினர் <strong>முத்து (Pearl)</strong> அணிவது மிகவும் நல்லது. இது இவர்களின் மனக் குழப்பத்தை நீக்கி, தெளிவான சிந்தனையைத் தரும்.</p>
     </main>
 
-    <footer>
-        <p>&copy; 2026 ZodiacMind.in | All Rights Reserved.</p>
-        <p>
-            <a href="../../../index.html">Home</a> |
-            <a href="../../../privacy-policy/index.html">Privacy Policy</a> |
-            <a href="mailto:support@zodiacmind.in">Support</a>
-        </p>
-    </footer>
+    <footer id="footer-container" data-root="../../../"></footer>
 </body>
 
 </html>

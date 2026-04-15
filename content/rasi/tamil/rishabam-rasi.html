@@ -16,6 +16,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Tiro+Tamil:ital@0;1&display=swap">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1943296208043134" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../../style.css">
+    <script src="../../../main.js" defer></script>
     <style>
         :root {
             --brand: #330033;
@@ -44,60 +46,6 @@
             background: var(--bg);
             color: var(--text);
             line-height: 1.6;
-        }
-
-        header {
-            background-color: #330033;
-            color: #fff;
-            position: sticky;
-            top: 0;
-            z-index: 999;
-            box-shadow: 0 8px 22px rgba(20, 0, 20, 0.18);
-        }
-
-        .header-inner {
-            width: min(1120px, calc(100% - 1.2rem));
-            margin: 0 auto;
-            padding: 0.85rem 0;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 1rem;
-        }
-
-        .brand {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.8rem;
-            color: #fff;
-            text-decoration: none;
-            font-weight: 800;
-            letter-spacing: 0.14em;
-        }
-
-        .brand img {
-            width: 50px;
-            height: 50px;
-            object-fit: contain;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 1.5rem;
-            align-items: center;
-        }
-
-        .nav-links a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 600;
-            opacity: 0.95;
-            transition: opacity 0.2s ease;
-        }
-
-        .nav-links a:hover {
-            opacity: 1;
         }
 
         .container {
@@ -134,55 +82,11 @@
             color: var(--brand);
             text-decoration: none;
         }
-
-        footer {
-            text-align: center;
-            padding: 2rem 1rem;
-            margin-top: 2rem;
-            font-size: 0.95rem;
-            color: var(--muted);
-        }
-
-        footer a {
-            color: var(--brand);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        @media (max-width: 640px) {
-            .header-inner {
-                padding: 0.8rem 0;
-            }
-
-            .brand {
-                font-size: 0.9rem;
-            }
-
-            .nav-links {
-                gap: 1rem;
-            }
-
-            .nav-links a {
-                font-size: 0.85rem;
-            }
-        }
     </style>
 </head>
 
 <body>
-    <header>
-        <div class="header-inner">
-            <a class="brand" href="../../../index.html">
-                <img src="../../../logo.png" alt="ZodiacMind logo">
-                <span><strong>ZODIAC</strong> MIND</span>
-            </a>
-            <nav class="nav-links">
-                <a href="../../../index.html">Home</a>
-                <a href="../rasi-guide.html">Rasi Guide</a>
-                <a href="../../../privacy-policy/index.html">Privacy Policy</a>
-            </nav>
-        </div>
-    </header>
+    <header id="header-container" data-root="../../../"></header>
 
     <main class="container">
         <div class="lang-switch">
@@ -192,7 +96,7 @@
         <p>ஜோதிட மண்டலத்தின் இரண்டாவது ராசி ரிஷபம் ஆகும். இது நிலத் தத்துவத்தைக் கொண்டது. சுக்கிர பகவானை அதிபதியாகக் கொண்ட இந்த ராசியில் பிறந்தவர்கள், அமைதியான சுபாவமும் கலை நயமும் மிக்கவர்கள். காளை மாட்டைச் சின்னமாகத் கொண்ட இவர்கள், எதிலும் உறுதியாகவும் நிதானமாகவும் செயல்படுவார்கள்.</p>
 
         <h2>ஆளுமை (Personality)</h2>
-        <p>ரிஷப ராசியினர் மிகவும் பொறுமையானவர்கள். எதையும் நிதானமாக யோசித்தே செய்வார்கள். இவர்களிடம் ஒருவிதமான வசீகரம் இருக்கும். ஆடம்பரமான மற்றும் நேர்த்தியான பொருட்களை விரும்புவார்கள். இவர்கள் குடும்பத்தின் மீது மிகுந்த பற்று கொண்டவர்கள். உறவுகளுக்கு அதிக முக்கியத்துவம் கொடுப்பார்கள். இவர்களின் பேச்சு மென்மையாகவும் அதே சமயம் தெளிவாகவும் இருக்கும். இவர்கள் மாற்றங்களை எளிதில் விரும்புவதில்லை, ஒரே பாதையில் செல்வதையே விரும்புவார்கள்.</p>
+        <p>ரிஷப ராசியினர் மிகவும் பொறுமையானவர்கள். எதையும் நிதானமாக யோசித்தே செய்வார்கள். இவர்களிடம் ஒருவிதமான வசீகரம் இருக்கும். ஆடம்பரமான மற்றும் நேர்த்தியான பொருட்களை விருப்புவார்கள். இவர்கள் குடும்பத்தின் மீது மிகுந்த பற்று கொண்டவர்கள். உறவுகளுக்கு அதிக முக்கியத்துவம் கொடுப்பார்கள். இவர்களின் பேச்சு மென்மையாகவும் அதே சமயம் தெளிவாகவும் இருக்கும். இவர்கள் மாற்றங்களை எளிதில் விரும்புவதில்லை, ஒரே பாதையில் செல்வதையே விரும்புவார்கள்.</p>
 
         <h2>பலம் (Strengths)</h2>
         <p>ரிஷப ராசியினரின் மிகப்பெரிய பலம் அவர்களின் விடாமுயற்சி. ஒரு காரியத்தை கையில் எடுத்தால், அதை முடிக்கும் வரை ஓயமாட்டார்கள். இவர்களிடம் மிகுந்த பொறுமை உண்டு. நம்பகத்தன்மை இவர்களின் மற்றொரு சிறப்பு. இவர்கள் கொடுத்த வாக்கை எக்காரணம் கொண்டும் மீற மாட்டார்கள். பணத்தை நிர்வகிப்பதில் இவர்கள் கில்லாடிகள். கலை உணர்வு மிக்கவர்கள் என்பதால், அழகான விஷயங்களை உருவாக்குவதில் வல்லவர்கள்.</p>
@@ -216,14 +120,7 @@
         <p>ரிஷப ராசியினர் <strong>வைரம் (Diamond)</strong> அணிவது மிகவும் நல்லது. இது இவர்களின் செல்வத்தையும் செல்வாக்கையும் உயர்த்தும். வைரத்திற்குப் பதிலாக வெள்ளை நிறக் கற்களையும் பயன்படுத்தலாம்.</p>
     </main>
 
-    <footer>
-        <p>&copy; 2026 ZodiacMind.in | All Rights Reserved.</p>
-        <p>
-            <a href="../../../index.html">Home</a> |
-            <a href="../../../privacy-policy/index.html">Privacy Policy</a> |
-            <a href="mailto:support@zodiacmind.in">Support</a>
-        </p>
-    </footer>
+    <footer id="footer-container" data-root="../../../"></footer>
 </body>
 
 </html>

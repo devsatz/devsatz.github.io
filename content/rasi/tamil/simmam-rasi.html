@@ -16,6 +16,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Tiro+Tamil:ital@0;1&display=swap">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1943296208043134" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../../style.css">
+    <script src="../../../main.js" defer></script>
     <style>
         :root {
             --brand: #330033;
@@ -44,60 +46,6 @@
             background: var(--bg);
             color: var(--text);
             line-height: 1.6;
-        }
-
-        header {
-            background-color: #330033;
-            color: #fff;
-            position: sticky;
-            top: 0;
-            z-index: 999;
-            box-shadow: 0 8px 22px rgba(20, 0, 20, 0.18);
-        }
-
-        .header-inner {
-            width: min(1120px, calc(100% - 1.2rem));
-            margin: 0 auto;
-            padding: 0.85rem 0;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 1rem;
-        }
-
-        .brand {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.8rem;
-            color: #fff;
-            text-decoration: none;
-            font-weight: 800;
-            letter-spacing: 0.14em;
-        }
-
-        .brand img {
-            width: 50px;
-            height: 50px;
-            object-fit: contain;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 1.5rem;
-            align-items: center;
-        }
-
-        .nav-links a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 600;
-            opacity: 0.95;
-            transition: opacity 0.2s ease;
-        }
-
-        .nav-links a:hover {
-            opacity: 1;
         }
 
         .container {
@@ -134,55 +82,11 @@
             color: var(--brand);
             text-decoration: none;
         }
-
-        footer {
-            text-align: center;
-            padding: 2rem 1rem;
-            margin-top: 2rem;
-            font-size: 0.95rem;
-            color: var(--muted);
-        }
-
-        footer a {
-            color: var(--brand);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        @media (max-width: 640px) {
-            .header-inner {
-                padding: 0.8rem 0;
-            }
-
-            .brand {
-                font-size: 0.9rem;
-            }
-
-            .nav-links {
-                gap: 1rem;
-            }
-
-            .nav-links a {
-                font-size: 0.85rem;
-            }
-        }
     </style>
 </head>
 
 <body>
-    <header>
-        <div class="header-inner">
-            <a class="brand" href="../../../index.html">
-                <img src="../../../logo.png" alt="ZodiacMind logo">
-                <span><strong>ZODIAC</strong> MIND</span>
-            </a>
-            <nav class="nav-links">
-                <a href="../../../index.html">Home</a>
-                <a href="../rasi-guide.html">Rasi Guide</a>
-                <a href="../../../privacy-policy/index.html">Privacy Policy</a>
-            </nav>
-        </div>
-    </header>
+    <header id="header-container" data-root="../../../"></header>
 
     <main class="container">
         <div class="lang-switch">
@@ -195,7 +99,7 @@
         <p>சிம்ம ராசியினர் இயற்கையிலேயே மற்றவர்களை ஈர்க்கும் சக்தி கொண்டவர்கள். இவர்களிடம் ஒருவிதமான ராஜ கலை இருக்கும். எதற்கும் அஞ்சாத நெஞ்சம் கொண்ட இவர்கள், மற்றவர்களுக்குப் பாதுகாப்பு அளிப்பதில் வல்லவர்கள். இவர்கள் பாராட்டுக்களை விரும்புவார்கள். இவர்களின் உள்ளம் மிகவும் மென்மையானது மற்றும் தாராளமானது. மற்றவர்களுக்கு உதவும்போது அவர்கள் ஒருபோதும் தயங்க மாட்டார்கள். ஒரு செயலைத் தொடங்கினால் அதில் வெற்றி பெறும் வரை ஓயமாட்டார்கள்.</p>
 
         <h2>பலம் (Strengths)</h2>
-        <p>இவர்களின் மிகப்பெரிய பலம் இவர்களின் தன்னம்பிக்கை மற்றும் தலைமைப் பண்பு. ஒரு கூட்டத்தில் இவர்களின் குரல் ஓங்கி ஒலிக்கும். நேர்மை மற்றும் விசுவாசம் இவர்களின் முக்கிய அடையாளங்கள். நண்பர்களுக்காக எதையும் செய்யத் துணிவார்கள். எப்பேர்ப்பட்ட சவாலையும் துணிச்சலுடன் எதிர்கொள்வார்கள். இவர்களின் படைப்பாற்றல் மற்றும் எதையும் புதுமையாகச் செய்யும் குணம் இவர்களை முன்னிலைப்படுத்தும்.</p>
+        <p>இவர்களின் மிகப்பெரிய பலம் இவர்களின் தன்னம்பிக்கை மற்றும் தலைமைப் பண்பு. ஒரு கூட்டத்தில் இவர்களின் குரல் ஓங்கி ஒலிக்கும். நேர்மை மற்றும் விசுவாசம் இவர்களின் முக்கிய அடையாளங்கள். நண்பர்களுக்காக எதையும் செய்யத் துணிவார்கள். எப்பேர்ப்பட்ட சவாலையும் துணிச்சலுடன் எதிர்கொள்வார்கள். இவர்களின் படைப்பாற்றல் மற்றும் எதையும் புதுமையாகச் செய்யும் குணம் இவர்களை முன்னிலைப்படுத்தும் Kal.</p>
 
         <h2>பலவீனம் (Weaknesses)</h2>
         <p>அதிகப்படியான அகங்காரம் (Ego) இவர்களின் முக்கிய பலவீனமாக அமையலாம். மற்றவர்கள் தங்களைப் புகழ வேண்டும் என்ற எதிர்பார்ப்பு சில நேரங்களில் ஏமாற்றத்தைத் தரும். பிடிவாத குணம் இவர்களிடம் அதிகம் இருக்கும். மற்றவர்களின் ஆலோசனைகளைக் கேட்பதில் இவர்களுக்குத் தயக்கம் இருக்கலாம். சில நேரங்களில் அதிகப்படியான அதிகாரம் செலுத்துவது மற்றவர்களுக்குத் தொந்தரவாக அமையலாம். தோல்விகளை இவர்கங்களால் எளிதில் ஜீரணிக்க முடியாது.</p>
@@ -216,14 +120,7 @@
         <p>சிம்ம ராசியினர் <strong>மாணிக்கம் (Ruby)</strong> அணிவது மிகவும் நல்லது. இது இவர்களின் உடல் ஆரோக்கியத்தையும் புகழையும் மேம்படுத்தும்.</p>
     </main>
 
-    <footer>
-        <p>&copy; 2026 ZodiacMind.in | All Rights Reserved.</p>
-        <p>
-            <a href="../../../index.html">Home</a> |
-            <a href="../../../privacy-policy/index.html">Privacy Policy</a> |
-            <a href="mailto:support@zodiacmind.in">Support</a>
-        </p>
-    </footer>
+    <footer id="footer-container" data-root="../../../"></footer>
 </body>
 
 </html>

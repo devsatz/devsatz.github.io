@@ -17,6 +17,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1943296208043134" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../../style.css">
+    <script src="../../../main.js" defer></script>
     <style>
         :root {
             --brand: #330033;
@@ -45,60 +47,6 @@
             background: var(--bg);
             color: var(--text);
             line-height: 1.6;
-        }
-
-        header {
-            background-color: #330033;
-            color: #fff;
-            position: sticky;
-            top: 0;
-            z-index: 999;
-            box-shadow: 0 8px 22px rgba(20, 0, 20, 0.18);
-        }
-
-        .header-inner {
-            width: min(1120px, calc(100% - 1.2rem));
-            margin: 0 auto;
-            padding: 0.85rem 0;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 1rem;
-        }
-
-        .brand {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.8rem;
-            color: #fff;
-            text-decoration: none;
-            font-weight: 800;
-            letter-spacing: 0.14em;
-        }
-
-        .brand img {
-            width: 50px;
-            height: 50px;
-            object-fit: contain;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 1.5rem;
-            align-items: center;
-        }
-
-        .nav-links a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 600;
-            opacity: 0.95;
-            transition: opacity 0.2s ease;
-        }
-
-        .nav-links a:hover {
-            opacity: 1;
         }
 
         .container {
@@ -135,55 +83,11 @@
             color: var(--brand);
             text-decoration: none;
         }
-
-        footer {
-            text-align: center;
-            padding: 1.5rem 1rem 2.5rem;
-            margin-top: 2rem;
-            font-size: 0.95rem;
-            color: var(--muted);
-        }
-
-        footer a {
-            color: var(--brand);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        @media (max-width: 640px) {
-            .header-inner {
-                padding: 0.8rem 0;
-            }
-
-            .brand {
-                font-size: 0.9rem;
-            }
-
-            .nav-links {
-                gap: 1rem;
-            }
-
-            .nav-links a {
-                font-size: 0.85rem;
-            }
-        }
     </style>
 </head>
 
 <body>
-    <header>
-        <div class="header-inner">
-            <a class="brand" href="../../../index.html" aria-label="ZodiacMind home page">
-                <img src="../../../logo.png" alt="ZodiacMind logo" width="50" height="50">
-                <span><strong>ZODIAC</strong> MIND</span>
-            </a>
-            <nav class="nav-links" aria-label="Primary navigation">
-                <a href="../../../index.html">Home</a>
-                <a href="../rasi-guide.html">Rasi Guide</a>
-                <a href="../../../privacy-policy/index.html">Privacy Policy</a>
-            </nav>
-        </div>
-    </header>
+    <header id="header-container" data-root="../../../"></header>
 
     <main class="container">
         <div class="lang-switch">
@@ -217,14 +121,7 @@
         <p><strong>Red Coral (Moonga)</strong> is the recommended lucky stone for Mesham. Wearing it can help enhance their courage and physical vitality while balancing their fiery energy.</p>
     </main>
 
-    <footer>
-        <p>&copy; 2026 ZodiacMind.in | All Rights Reserved.</p>
-        <p>
-            <a href="../../../index.html">Home</a> |
-            <a href="../../../privacy-policy/index.html">Privacy Policy</a> |
-            <a href="mailto:support@zodiacmind.in">Support</a>
-        </p>
-    </footer>
+    <footer id="footer-container" data-root="../../../"></footer>
 </body>
 
 </html>
