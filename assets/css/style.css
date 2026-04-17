@@ -100,6 +100,42 @@ header {
     transform: translateY(-9px) rotate(-45deg);
 }
 
+/* Social Buttons Styles */
+.social-links {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+}
+
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    background: #ffffff;
+    color: var(--brand);
+    border: 1px solid var(--border);
+    box-shadow: 0 6px 15px rgba(51, 0, 51, 0.06);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.social-btn:hover,
+.social-btn:focus-visible {
+    transform: translateY(-5px);
+    background: var(--brand);
+    color: #fff;
+    box-shadow: 0 12px 24px rgba(51, 0, 51, 0.15);
+    border-color: var(--brand);
+}
+
+.social-btn svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
 /* Shared Footer Styles */
 footer {
     text-align: center;
