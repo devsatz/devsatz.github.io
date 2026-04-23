@@ -10,81 +10,83 @@
     <loc>https://zodiacmind.in/horoscope/</loc>
   </url>
   <url>
-    <loc>https://zodiacmind.in/horoscope/rasi-guide.html</loc>
+    <loc>https://zodiacmind.in/rasi-guide/</loc>
   </url>
   <url>
-    <loc>https://zodiacmind.in/horoscope/rasi-guide-ta.html</loc>
+    <loc>https://zodiacmind.in/rasi-guide/tamil/</loc>
+  </url>
+  <!-- English Horoscopes -->
+  <url>
+    <loc>https://zodiacmind.in/horoscope/english/mesham-rasi/</loc>
   </url>
   <url>
-    <loc>https://zodiacmind.in/horoscope/english/dhanusu-rasi.html</loc>
+    <loc>https://zodiacmind.in/horoscope/english/rishabam-rasi/</loc>
   </url>
   <url>
-    <loc>https://zodiacmind.in/horoscope/english/kadagam-rasi.html</loc>
+    <loc>https://zodiacmind.in/horoscope/english/mithunam-rasi/</loc>
   </url>
   <url>
-    <loc>https://zodiacmind.in/horoscope/english/kanni-rasi.html</loc>
+    <loc>https://zodiacmind.in/horoscope/english/kadagam-rasi/</loc>
   </url>
   <url>
-    <loc>https://zodiacmind.in/horoscope/english/kumbam-rasi.html</loc>
+    <loc>https://zodiacmind.in/horoscope/english/simmam-rasi/</loc>
   </url>
   <url>
-    <loc>https://zodiacmind.in/horoscope/english/magaram-rasi.html</loc>
+    <loc>https://zodiacmind.in/horoscope/english/kanni-rasi/</loc>
   </url>
   <url>
-    <loc>https://zodiacmind.in/horoscope/english/meenam-rasi.html</loc>
+    <loc>https://zodiacmind.in/horoscope/english/thulam-rasi/</loc>
   </url>
   <url>
-    <loc>https://zodiacmind.in/horoscope/english/mesham-rasi.html</loc>
+    <loc>https://zodiacmind.in/horoscope/english/viruchigam-rasi/</loc>
   </url>
   <url>
-    <loc>https://zodiacmind.in/horoscope/english/mithunam-rasi.html</loc>
+    <loc>https://zodiacmind.in/horoscope/english/dhanusu-rasi/</loc>
   </url>
   <url>
-    <loc>https://zodiacmind.in/horoscope/english/rishabam-rasi.html</loc>
+    <loc>https://zodiacmind.in/horoscope/english/magaram-rasi/</loc>
   </url>
   <url>
-    <loc>https://zodiacmind.in/horoscope/english/simmam-rasi.html</loc>
+    <loc>https://zodiacmind.in/horoscope/english/kumbam-rasi/</loc>
   </url>
   <url>
-    <loc>https://zodiacmind.in/horoscope/english/thulam-rasi.html</loc>
+    <loc>https://zodiacmind.in/horoscope/english/meenam-rasi/</loc>
+  </url>
+  <!-- Tamil Horoscopes -->
+  <url>
+    <loc>https://zodiacmind.in/horoscope/tamil/mesham-rasi/</loc>
   </url>
   <url>
-    <loc>https://zodiacmind.in/horoscope/english/viruchigam-rasi.html</loc>
+    <loc>https://zodiacmind.in/horoscope/tamil/rishabam-rasi/</loc>
   </url>
   <url>
-    <loc>https://zodiacmind.in/horoscope/tamil/dhanusu-rasi.html</loc>
+    <loc>https://zodiacmind.in/horoscope/tamil/mithunam-rasi/</loc>
   </url>
   <url>
-    <loc>https://zodiacmind.in/horoscope/tamil/kadagam-rasi.html</loc>
+    <loc>https://zodiacmind.in/horoscope/tamil/kadagam-rasi/</loc>
   </url>
   <url>
-    <loc>https://zodiacmind.in/horoscope/tamil/kanni-rasi.html</loc>
+    <loc>https://zodiacmind.in/horoscope/tamil/simmam-rasi/</loc>
   </url>
   <url>
-    <loc>https://zodiacmind.in/horoscope/tamil/kumbam-rasi.html</loc>
+    <loc>https://zodiacmind.in/horoscope/tamil/kanni-rasi/</loc>
   </url>
   <url>
-    <loc>https://zodiacmind.in/horoscope/tamil/magaram-rasi.html</loc>
+    <loc>https://zodiacmind.in/horoscope/tamil/thulam-rasi/</loc>
   </url>
   <url>
-    <loc>https://zodiacmind.in/horoscope/tamil/meenam-rasi.html</loc>
+    <loc>https://zodiacmind.in/horoscope/tamil/viruchigam-rasi/</loc>
   </url>
   <url>
-    <loc>https://zodiacmind.in/horoscope/tamil/mesham-rasi.html</loc>
+    <loc>https://zodiacmind.in/horoscope/tamil/dhanusu-rasi/</loc>
   </url>
   <url>
-    <loc>https://zodiacmind.in/horoscope/tamil/mithunam-rasi.html</loc>
+    <loc>https://zodiacmind.in/horoscope/tamil/magaram-rasi/</loc>
   </url>
   <url>
-    <loc>https://zodiacmind.in/horoscope/tamil/rishabam-rasi.html</loc>
+    <loc>https://zodiacmind.in/horoscope/tamil/kumbam-rasi/</loc>
   </url>
   <url>
-    <loc>https://zodiacmind.in/horoscope/tamil/simmam-rasi.html</loc>
-  </url>
-  <url>
-    <loc>https://zodiacmind.in/horoscope/tamil/thulam-rasi.html</loc>
-  </url>
-  <url>
-    <loc>https://zodiacmind.in/horoscope/tamil/viruchigam-rasi.html</loc>
+    <loc>https://zodiacmind.in/horoscope/tamil/meenam-rasi/</loc>
   </url>
 </urlset>
